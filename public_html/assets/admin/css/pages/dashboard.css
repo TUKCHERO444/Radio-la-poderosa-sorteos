@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Dashboard
+   ========================================================================== */
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(90% 140% at 100% 0%, rgba(13, 110, 253, 0.38), transparent 55%),
+        linear-gradient(120deg, var(--brand-navy-3), #0d4a8f);
+    box-shadow: var(--shadow-md);
+    color: #ffffff;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    right: -5rem;
+    bottom: -8rem;
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid rgba(147, 197, 253, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 42rem;
+}
+
+.hero .eyebrow {
+    margin-bottom: 0.45rem;
+    color: var(--brand-blue-soft);
+}
+
+.hero h1 {
+    margin-bottom: 0.35rem;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    letter-spacing: -0.03em;
+}
+
+.hero p {
+    max-width: 62ch;
+    color: #cbd5e1;
+    font-size: var(--text-sm);
+    line-height: 1.6;
+}
+
+.hero .btn {
+    position: relative;
+    z-index: 1;
+}
+
+/* Accesos rápidos --------------------------------------------------------- */
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition:
+        border-color var(--dur) var(--ease),
+        transform var(--dur) var(--ease);
+}
+
+.quick-link:hover {
+    background: var(--surface-2);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+}
+
+.quick-link-icon {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: 0 0 2.5rem;
+    border-radius: 0.625rem;
+    background: var(--primary-soft);
+    color: var(--primary-text);
+}
+
+.quick-link-icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.quick-link > span:last-child {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    line-height: 1.3;
+}
+
+.quick-link strong {
+    color: var(--text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.quick-link small {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+}
+
+/* Hoja de ruta ------------------------------------------------------------ */
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.roadmap li {
+    display: flex;
+    gap: 0.8rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.roadmap li:last-child {
+    border-bottom: 0;
+}
+
+.roadmap-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    flex: 0 0 0.75rem;
+    margin-top: 0.25rem;
+    border: 2px solid var(--border-strong);
+    border-radius: 50%;
+    background: var(--surface);
+}
+
+.roadmap li.is-done .roadmap-dot {
+    border-color: var(--brand-blue);
+    background: var(--brand-blue);
+    box-shadow: 0 0 0 4px rgba(11, 94, 215, 0.16);
+}
+
+.roadmap li > span:last-child {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+}
+
+.roadmap strong {
+    color: var(--text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.roadmap small {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+}

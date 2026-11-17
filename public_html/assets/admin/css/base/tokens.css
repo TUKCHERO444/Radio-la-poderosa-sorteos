@@ -1,0 +1,249 @@
+/* ==========================================================================
+   Variables del sistema · CSS nativo
+   --------------------------------------------------------------------------
+   No se usa Tailwind ni ningún token de un framework. Estas variables son
+   la única fuente de verdad para color, tipografía, radios, sombras y motion.
+   Los componentes consumen las variables; nunca escriben un color literal.
+   ========================================================================== */
+
+:root {
+    color-scheme: light;
+
+    /* Marca · azul formal estilo AdminLTE ---------------------------------- */
+    --brand-navy: #0b1626;
+    --brand-navy-2: #0f1f33;
+    --brand-navy-3: #0b2e59;
+    --brand-blue: #0b5ed7;
+    --brand-blue-strong: #0a58ca;
+    --brand-blue-deep: #084298;
+    --brand-blue-soft: #6ea8fe;
+    --brand-blue-pale: #e7f1ff;
+    --brand-blue-ink: #ffffff;
+
+    /* Superficies ----------------------------------------------------------- */
+    --bg-page: #f4f6f9;
+    --surface: #ffffff;
+    --surface-2: #f8fafc;
+    --surface-3: #eef4fa;
+    --surface-inset: #f1f5f9;
+    --surface-hover: #f7f9fc;
+
+    /* Texto ----------------------------------------------------------------- */
+    --text: #0f172a;
+    --text-soft: #334155;
+    --text-muted: #5b6b80;
+    --text-faint: #94a3b8;
+
+    /* Líneas ---------------------------------------------------------------- */
+    --border: #e1e8f0;
+    --border-strong: #cbd5e1;
+    --border-subtle: #edf2f8;
+
+    /* Acción principal y foco ---------------------------------------------- */
+    --primary: var(--brand-blue);
+    --primary-hover: var(--brand-blue-strong);
+    --primary-soft: var(--brand-blue-pale);
+    --primary-ink: var(--brand-blue-ink);
+    --primary-text: var(--brand-blue-strong);
+    --focus: var(--brand-blue-deep);
+    --focus-ring: rgba(11, 94, 215, 0.2);
+
+    /* Semántica ------------------------------------------------------------- */
+    --success: #15803d;
+    --success-bg: #f0fdf4;
+    --success-border: #bbf7d0;
+    --warning: #b45309;
+    --warning-bg: #fffbeb;
+    --warning-border: #fde68a;
+    --danger: #b91c1c;
+    --danger-bg: #fef2f2;
+    --danger-border: #fecaca;
+    --danger-strong: #dc2626;
+    --danger-strong-hover: #b91c1c;
+    --info: #1d4ed8;
+    --info-bg: #eff6ff;
+    --info-border: #bfdbfe;
+    --teal: #0f766e;
+    --teal-bg: #f0fdfa;
+    --teal-border: #99f6e4;
+
+    /* Badges neutros -------------------------------------------------------- */
+    --slate-badge-bg: #f1f5f9;
+    --slate-badge-text: #475569;
+
+    /* Tablas ---------------------------------------------------------------- */
+    --table-head-bg: #f6f9fd;
+    --table-head-solid: #f6f9fd;
+    --table-row-hover: #f6f9fd;
+
+    /* Inputs ---------------------------------------------------------------- */
+    --input-bg: #ffffff;
+    --input-border: var(--border-strong);
+    --input-placeholder: var(--text-faint);
+
+    /* Topbar / overlay ------------------------------------------------------ */
+    --topbar-bg: rgba(255, 255, 255, 0.88);
+    --topbar-border: var(--border);
+    --overlay: rgba(2, 6, 23, 0.56);
+
+    /* Sidebar claro · azul formal ----------------------------------------- */
+    --sidebar-bg: #f7faff;
+    --sidebar-bg-2: #eef5fd;
+    --sidebar-text: #475569;
+    --sidebar-text-strong: #0f172a;
+    --sidebar-text-muted: #64748b;
+    --sidebar-border: #dbe7f5;
+    --sidebar-hover: #eaf2fd;
+    --sidebar-active: var(--brand-blue);
+    --sidebar-active-border: var(--brand-blue);
+    --sidebar-active-text: #ffffff;
+    --sidebar-accent: #ffffff;
+    --sidebar-label: #64748b;
+    --sidebar-disabled: #94a3b8;
+    --sidebar-scrollbar: rgba(100, 116, 139, 0.28);
+
+    /* Radios ---------------------------------------------------------------- */
+    --radius-xs: 6px;
+    --radius-sm: 9px;
+    --radius: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 22px;
+    --radius-pill: 999px;
+
+    /* Sombras --------------------------------------------------------------- */
+    --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.18);
+
+    /* Espaciado ------------------------------------------------------------- */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --page-pad: clamp(1rem, 1.2vw + 0.75rem, 2rem);
+    --sidebar-width: 272px;
+
+    /* Tipografía ------------------------------------------------------------ */
+    --font-sans: "Inter", "Segoe UI Variable Text", "Segoe UI", system-ui,
+        -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas,
+        "Liberation Mono", monospace;
+    --text-2xs: 0.625rem;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-md: 0.9375rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --leading-tight: 1.2;
+    --leading-snug: 1.35;
+    --leading: 1.55;
+    --tracking-wide: 0.08em;
+    --tracking-wider: 0.12em;
+
+    /* Motion ---------------------------------------------------------------- */
+    --dur-fast: 120ms;
+    --dur: 180ms;
+    --dur-slow: 280ms;
+    --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+    /* Capas ----------------------------------------------------------------- */
+    --z-topbar: 30;
+    --z-overlay: 50;
+    --z-sidebar: 60;
+    --z-dialog: 80;
+}
+
+/* ==========================================================================
+   Modo oscuro
+   --------------------------------------------------------------------------
+   El atributo data-theme lo coloca theme-init.js antes de pintar la página.
+   Los tonos oscuros no usan negro puro: slate-950 / slate-900 / slate-800.
+   ========================================================================== */
+
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg-page: #020617;
+    --surface: #0f172a;
+    --surface-2: #131f36;
+    --surface-3: #1e293b;
+    --surface-inset: #1e293b;
+    --surface-hover: #16213a;
+
+    --text: #e2e8f0;
+    --text-soft: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-faint: #64748b;
+
+    --border: #1e293b;
+    --border-strong: #334155;
+    --border-subtle: #172033;
+
+    --primary: var(--brand-blue);
+    --primary-hover: var(--brand-blue-strong);
+    --primary-soft: rgba(13, 110, 253, 0.16);
+    --primary-ink: #ffffff;
+    --primary-text: var(--brand-blue-soft);
+    --focus: var(--brand-blue-soft);
+    --focus-ring: rgba(110, 168, 254, 0.22);
+
+    --success: #4ade80;
+    --success-bg: rgba(22, 163, 74, 0.14);
+    --success-border: rgba(74, 222, 128, 0.28);
+    --warning: #fbbf24;
+    --warning-bg: rgba(217, 119, 6, 0.14);
+    --warning-border: rgba(251, 191, 36, 0.28);
+    --danger: #f87171;
+    --danger-bg: rgba(220, 38, 38, 0.14);
+    --danger-border: rgba(248, 113, 113, 0.28);
+    --info: #93c5fd;
+    --info-bg: rgba(37, 99, 235, 0.16);
+    --info-border: rgba(96, 165, 250, 0.3);
+    --teal: #5eead4;
+    --teal-bg: rgba(13, 148, 136, 0.16);
+    --teal-border: rgba(45, 212, 191, 0.28);
+
+    --slate-badge-bg: #1e293b;
+    --slate-badge-text: #cbd5e1;
+
+    --table-head-bg: rgba(30, 41, 59, 0.55);
+    --table-head-solid: #172133;
+    --table-row-hover: rgba(30, 41, 59, 0.45);
+
+    --input-bg: #16213a;
+    --input-border: #334155;
+    --input-placeholder: #64748b;
+
+    --topbar-bg: rgba(15, 23, 42, 0.86);
+    --topbar-border: #1e293b;
+    --overlay: rgba(2, 6, 23, 0.72);
+
+    --sidebar-bg: #0b1626;
+    --sidebar-bg-2: #0f1f33;
+    --sidebar-text: #cbd5e1;
+    --sidebar-text-strong: #ffffff;
+    --sidebar-text-muted: #94a3b8;
+    --sidebar-border: rgba(148, 163, 184, 0.16);
+    --sidebar-hover: rgba(148, 163, 184, 0.1);
+    --sidebar-active: var(--brand-blue);
+    --sidebar-active-border: var(--brand-blue);
+    --sidebar-active-text: #ffffff;
+    --sidebar-accent: #ffffff;
+    --sidebar-label: #7d8da6;
+    --sidebar-disabled: #64748b;
+    --sidebar-scrollbar: rgba(148, 163, 184, 0.28);
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.25);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.28), 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 14px 34px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 26px 64px rgba(0, 0, 0, 0.45);
+}

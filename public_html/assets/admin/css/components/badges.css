@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Badges y píldoras de estado
+   ========================================================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-pill);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+.badge-primary {
+    background: var(--primary-soft);
+    border-color: var(--info-border);
+    color: var(--primary-text);
+}
+
+.badge-slate {
+    background: var(--slate-badge-bg);
+    color: var(--slate-badge-text);
+}
+
+.badge-soft {
+    background: var(--info-bg);
+    border-color: var(--info-border);
+    color: var(--info);
+}
+
+.badge-success {
+    background: var(--success-bg);
+    border-color: var(--success-border);
+    color: var(--success);
+}
+
+.badge-danger {
+    background: var(--danger-bg);
+    border-color: var(--danger-border);
+    color: var(--danger);
+}
+
+.badge-warning {
+    background: var(--warning-bg);
+    border-color: var(--warning-border);
+    color: var(--warning);
+}
+
+.badge-teal {
+    background: var(--teal-bg);
+    border-color: var(--teal-border);
+    color: var(--teal);
+}
+
+.badge-micro {
+    padding: 0.12rem 0.4rem;
+    font-size: var(--text-2xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.badge-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    flex: 0 0 0.4rem;
+    border-radius: 50%;
+    background: currentColor;
+}

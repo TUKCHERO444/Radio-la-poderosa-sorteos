@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Impresión
+   ========================================================================== */
+
+@media print {
+    :root {
+        --bg-page: #ffffff;
+        --surface: #ffffff;
+        --surface-2: #ffffff;
+        --surface-3: #ffffff;
+        --text: #000000;
+        --text-soft: #000000;
+        --text-muted: #333333;
+        --border: #999999;
+        --border-strong: #666666;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt;
+    }
+
+    .app-sidebar,
+    .topbar,
+    .app-overlay,
+    .theme-toggle,
+    .skip-link,
+    .dialog,
+    .row-actions,
+    .page-head-actions,
+    .form-actions,
+    .alert-close {
+        display: none !important;
+    }
+
+    .app-shell {
+        display: block;
+    }
+
+    .app-main {
+        min-height: 0;
+    }
+
+    .app-content {
+        max-width: none;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .card,
+    .stat,
+    .empty {
+        box-shadow: none;
+        border-color: #999999;
+        break-inside: avoid;
+    }
+
+    .hero {
+        color: #000000;
+        background: #ffffff;
+        border: 1px solid #999999;
+        box-shadow: none;
+    }
+
+    .hero h1,
+    .hero p,
+    .hero .eyebrow {
+        color: #000000;
+    }
+
+    .table th {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .badge {
+        border: 1px solid #999999;
+        color: #000000;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    @page {
+        margin: 1.5cm;
+    }
+}

@@ -1,0 +1,378 @@
+/* ==========================================================================
+   Layout de formularios amplios, secciones, asignaciones y publicación
+   ========================================================================== */
+
+.form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 1.35rem;
+    align-items: start;
+}
+
+.form-layout-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+    min-width: 0;
+}
+
+.form-layout-side {
+    position: sticky;
+    top: 84px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+    min-width: 0;
+}
+
+.form-fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.form-fieldset[disabled] .form-section {
+    opacity: 0.92;
+}
+
+.form-section {
+    padding: 1.35rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-xs);
+}
+
+.form-section-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.form-section-title {
+    font-size: var(--text-md);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.form-section-desc {
+    margin-top: 0.2rem;
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    line-height: 1.5;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* Dinero ------------------------------------------------------------------ */
+
+.input-money {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-money .input-prefix {
+    position: absolute;
+    left: 0.8rem;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    pointer-events: none;
+}
+
+.input-money input {
+    padding-left: 2.4rem;
+}
+
+/* Asignaciones de premios y métodos -------------------------------------- */
+
+.assignment-list {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.assignment-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition:
+        border-color var(--dur) var(--ease),
+        background-color var(--dur) var(--ease);
+}
+
+.assignment-item:hover {
+    background: var(--surface);
+    border-color: var(--border-strong);
+}
+
+.assignment-item input[type="checkbox"] {
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: 0.2rem;
+    accent-color: var(--primary-hover);
+    flex: 0 0 1.05rem;
+}
+
+.assignment-thumb {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: 0 0 2.5rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xs);
+    background: var(--surface-3);
+    color: var(--text-faint);
+}
+
+.assignment-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.assignment-thumb svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.assignment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    min-width: 0;
+    line-height: 1.35;
+}
+
+.assignment-info strong {
+    color: var(--text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.assignment-info small {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+}
+
+/* Resumen lateral --------------------------------------------------------- */
+
+.status-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+}
+
+.status-row strong {
+    color: var(--text);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* Zona de acciones destructivas ------------------------------------------ */
+
+.danger-zone {
+    border: 1px solid var(--danger-border);
+    border-radius: var(--radius-sm);
+    background: var(--danger-bg);
+}
+
+.danger-zone > summary {
+    padding: 0.7rem 0.85rem;
+    color: var(--danger);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.danger-zone > summary::-webkit-details-marker {
+    display: none;
+}
+
+.danger-zone > summary::after {
+    content: "+";
+    float: right;
+    color: var(--danger);
+}
+
+.danger-zone[open] > summary::after {
+    content: "−";
+}
+
+.danger-zone > form {
+    padding: 0 0.85rem 0.85rem;
+}
+
+/* Publicación ------------------------------------------------------------- */
+
+.publish-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.publish-requirement {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.8rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.publish-requirement .badge {
+    margin-left: auto;
+    flex: 0 0 auto;
+}
+
+.publish-requirement-icon {
+    display: grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: 0 0 1.6rem;
+    border-radius: 50%;
+    background: var(--surface-3);
+    color: var(--text-muted);
+}
+
+.publish-requirement.is-ok .publish-requirement-icon {
+    background: var(--success-bg);
+    color: var(--success);
+}
+
+.publish-requirement.is-missing .publish-requirement-icon {
+    background: var(--warning-bg);
+    color: var(--warning);
+}
+
+.publish-requirement-icon svg {
+    width: 0.95rem;
+    height: 0.95rem;
+}
+
+.publish-requirement span:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+}
+
+.publish-requirement strong {
+    color: var(--text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.publish-requirement small {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+}
+
+.publish-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.publish-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.85rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.publish-check:hover {
+    border-color: var(--border-strong);
+}
+
+.publish-check input[type="checkbox"] {
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: 0.15rem;
+    accent-color: var(--primary-hover);
+    flex: 0 0 1.05rem;
+}
+
+.publish-check span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.publish-check strong {
+    color: var(--text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.publish-check small {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    line-height: 1.45;
+}
+
+/* Responsive -------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .form-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-layout-side {
+        position: static;
+    }
+}
+
+@media (max-width: 900px) {
+    .form-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .form-section {
+        padding: 1.1rem;
+    }
+
+    .form-grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .publish-requirement {
+        flex-wrap: wrap;
+    }
+
+    .publish-requirement .badge {
+        margin-left: 2.3rem;
+    }
+}

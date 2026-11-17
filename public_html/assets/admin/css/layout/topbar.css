@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Barra superior
+   ========================================================================== */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-topbar);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 0.75rem var(--page-pad);
+    background: var(--topbar-bg);
+    border-bottom: 1px solid var(--topbar-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.topbar-title {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    line-height: 1.2;
+}
+
+.topbar-eyebrow {
+    color: var(--text-muted);
+    font-size: var(--text-2xs);
+    font-weight: 700;
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+}
+
+.topbar-title-text {
+    overflow: hidden;
+    color: var(--text);
+    font-size: var(--text-md);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-left: auto;
+}
+
+.menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: 0 0 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.625rem;
+    background: var(--surface);
+    color: var(--text);
+    transition:
+        border-color var(--dur) var(--ease);
+}
+
+.menu-btn:hover {
+    background: var(--surface-2);
+    border-color: var(--border-strong);
+}
+
+.menu-btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.topbar .btn {
+    min-height: 2.5rem;
+}

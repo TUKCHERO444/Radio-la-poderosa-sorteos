@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Estructura general del panel
+   ========================================================================== */
+
+.app-body {
+    background: var(--bg-page);
+}
+
+.app-shell {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    min-height: 100vh;
+}
+
+.app-main {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 100vh;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 100%;
+    padding: var(--page-pad);
+}
+
+.app-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-overlay);
+    background: var(--overlay);
+    backdrop-filter: blur(2px);
+}
+
+/* Aviso de contexto para el salto de contenido ---------------------------- */
+
+.app-content:focus {
+    outline: none;
+}
+
+@media (min-width: 901px) {
+    .app-overlay {
+        display: none;
+    }
+}

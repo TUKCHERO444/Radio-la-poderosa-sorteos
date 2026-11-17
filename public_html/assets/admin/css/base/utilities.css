@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Utilidades transversales
+   ========================================================================== */
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 200;
+    padding: 0.65rem 1rem;
+    border-radius: var(--radius-sm);
+    background: var(--primary);
+    color: var(--primary-ink);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-160%);
+    transition: transform var(--dur) var(--ease);
+}
+
+.skip-link:focus-visible {
+    transform: translateY(0);
+}
+
+.icon {
+    width: 1.15em;
+    height: 1.15em;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.truncate {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.mt-4 {
+    margin-top: var(--space-4);
+}
+
+.my-4 {
+    margin-block: var(--space-4);
+}
+
+.field-span-2 {
+    grid-column: 1 / -1;
+}
+
+.stack-sm,
+.stack,
+.stack-lg {
+    display: flex;
+    flex-direction: column;
+}
+
+.stack-sm {
+    gap: var(--space-2);
+}
+
+.stack {
+    gap: var(--space-4);
+}
+
+.stack-lg {
+    gap: var(--space-6);
+}
+
+.cluster {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+.is-muted {
+    opacity: 0.8;
+}
+
+.divider {
+    height: 1px;
+    background: var(--border);
+}
+
+.full-bleed {
+    margin-inline: calc(var(--page-pad) * -1);
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --border: #94a3b8;
+        --border-strong: #64748b;
+        --text-muted: #475569;
+    }
+
+    [data-theme="dark"] {
+        --border: #475569;
+        --border-strong: #64748b;
+        --text-muted: #cbd5e1;
+    }
+}

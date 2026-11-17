@@ -1,0 +1,18 @@
+# Configuración local con credenciales (Cloudinary, base de datos, etc.)
+/app/inc/config.local.php
+
+# Registros, respaldos y caché locales
+/app/storage/logs/*.log
+/app/storage/backups/
+/app/storage/cache/
+
+# Paquetes de despliegue generados (build)
+/dist/
+
+# Dependencias de opencode (se regeneran con npm install)
+/.opencode/node_modules/
+
+# Subidas locales (cuando se usa el driver local)
+/public_html/uploads/prizes/*
+/public_html/uploads/payment-methods/*
+/public_html/uploads/raffles/*

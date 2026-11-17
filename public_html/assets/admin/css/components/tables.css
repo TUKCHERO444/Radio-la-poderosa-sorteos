@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Tablas y listados
+   - Cabecera 12 px en mayúsculas.
+   - Celdas táctiles y legibles.
+   - El wrapper siempre permite scroll horizontal.
+   ========================================================================== */
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    font-size: var(--text-sm);
+    color: var(--text-soft);
+}
+
+.table th {
+    padding: 0.85rem 1.15rem;
+    background: var(--table-head-bg);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: var(--tracking-wide);
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 1.05rem 1.15rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.table tbody tr {
+    transition: background-color var(--dur-fast) var(--ease);
+}
+
+.table tbody tr:hover,
+.table tbody tr:focus-within {
+    background: var(--table-row-hover);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.table .cell-primary {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.table .cell-muted {
+    color: var(--text-muted);
+}
+
+/* Celda de dos lineas: dato principal + detalle --------------------------- */
+
+.cell-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    line-height: 1.35;
+}
+
+.cell-stack strong {
+    color: var(--text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.cell-stack small {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+}
+
+.table-actions-col {
+    text-align: right !important;
+}
+
+/* La columna de acciones queda visible mientras el resto hace scroll. */
+.table th.table-actions-col,
+.table td[data-label="Acciones"] {
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    background: var(--surface);
+}
+
+.table thead th.table-actions-col {
+    background: var(--table-head-solid);
+}
+
+.table tbody tr:hover td[data-label="Acciones"],
+.table tbody tr:focus-within td[data-label="Acciones"] {
+    background: var(--table-row-hover);
+}
+
+/* Celda compuesta de usuario --------------------------------------------- */
+
+.cell-user {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 0;
+}
+
+.cell-user > span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+    line-height: 1.25;
+}
+
+.cell-user strong {
+    overflow: hidden;
+    color: var(--text);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cell-user small:not(.badge) {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+}
+
+/* Acciones de fila -------------------------------------------------------- */
+
+.row-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.4rem;
+}
+
+.row-actions form {
+    margin: 0;
+}
+
+/* Variante compacta para listados densos --------------------------------- */
+
+.table-compact th {
+    padding: 0.65rem 1rem;
+}
+
+.table-compact td {
+    padding: 0.75rem 1rem;
+}
+
+/* Tabla sin tarjeta contenedora ------------------------------------------ */
+
+.table-bare th {
+    background: transparent;
+}

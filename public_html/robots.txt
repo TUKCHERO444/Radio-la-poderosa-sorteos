@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /inc/
+Disallow: /storage/
+Disallow: /uploads/
+
+Sitemap: https://live.radiolapoderosatv.com/sitemap.xml

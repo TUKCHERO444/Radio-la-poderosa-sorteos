@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Panel de administración · Radio La Poderosa
+   Punto de entrada único del sistema visual.
+
+   Arquitectura (CSS nativo, sin frameworks ni preprocesadores):
+   1. base/      → reset, variables, tipografía y utilidades.
+   2. layout/    → estructura del panel y de la autenticación.
+   3. components/→ piezas reutilizables (botones, tablas, formularios…).
+   4. pages/     → estilos propios de cada pantalla.
+   5. responsive → ajustes por breakpoint.
+   6. print      → versión imprimible.
+
+   Regla: ninguna vista debe llevar estilos inline. Si una pantalla necesita
+   una regla nueva, se agrega en el archivo del componente o de la página.
+   ========================================================================== */
+
+@import url("css/base/reset.css?v=20261116-11");
+@import url("css/base/tokens.css?v=20261116-11");
+@import url("css/base/typography.css?v=20261116-11");
+@import url("css/base/utilities.css?v=20261116-11");
+
+@import url("css/layout/shell.css?v=20261116-11");
+@import url("css/layout/sidebar.css?v=20261116-11");
+@import url("css/layout/topbar.css?v=20261116-11");
+@import url("css/layout/auth.css?v=20261116-11");
+
+@import url("css/components/buttons.css?v=20261116-11");
+@import url("css/components/cards.css?v=20261116-11");
+@import url("css/components/stats.css?v=20261116-11");
+@import url("css/components/badges.css?v=20261116-11");
+@import url("css/components/tables.css?v=20261116-11");
+@import url("css/components/forms.css?v=20261116-11");
+@import url("css/components/form-layout.css?v=20261116-11");
+@import url("css/components/media.css?v=20261116-11");
+@import url("css/components/alerts.css?v=20261116-11");
+@import url("css/components/empty-state.css?v=20261116-11");
+@import url("css/components/toolbar.css?v=20261116-11");
+@import url("css/components/pagination.css?v=20261116-11");
+@import url("css/components/dialog.css?v=20261116-11");
+@import url("css/components/theme-toggle.css?v=20261116-11");
+
+@import url("css/pages/dashboard.css?v=20261116-11");
+@import url("css/pages/system.css?v=20261116-11");
+
+@import url("css/responsive.css?v=20261116-11");
+@import url("css/print.css?v=20261116-11");
